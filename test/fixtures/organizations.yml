@@ -1,0 +1,11 @@
+one:
+  name: Organization One
+  slug: organization-one
+  schema_name: organization_one
+  status: active
+
+two:
+  name: Organization Two
+  slug: organization-two
+  schema_name: organization_two
+  status: active

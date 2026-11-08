@@ -1,0 +1,15 @@
+class CreateOrganizations < ActiveRecord::Migration[8.1]
+  def change
+    create_table :organizations, id: :uuid do |t|
+      t.string :name, null: false
+      t.string :slug, null: false
+      t.string :schema_name, null: false
+      t.string :status, null: false, default: "active"
+
+      t.timestamps
+    end
+
+    add_index :organizations, :slug, unique: true
+    add_index :organizations, :schema_name, unique: true
+  end
+end
